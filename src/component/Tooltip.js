@@ -136,6 +136,8 @@ class Tooltip extends Component {
       payload.filter(entry => !_.isNil(entry.value)) : payload;
     const hasPayload = finalPayload && finalPayload.length;
     const { content, viewBox, coordinate, position, active, offset, wrapperStyle } = this.props;
+    console.log('active >>>>>> ', active)
+    console.log('hasPayload >>>>>> ', hasPayload)
     let outerStyle = {
       pointerEvents: 'none',
       visibility: active && hasPayload ? 'visible' : 'hidden',
